@@ -1,0 +1,83 @@
+/* Apply styles to all elements */
+* {
+  box-sizing: border-box;
+  /* 
+    📏 Ensures padding and borders are included in width/height.
+    Prevents layout issues.
+  */
+}
+
+/* Style the whole page */
+body {
+  font-family:  'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /*  Uses a modern, readable font stack.*/
+  background-color: #f7f9fc;
+  color: #333;
+  padding: 40px; /* Adds space around the edges */
+  line-height: 1.6; /*Increases space between lines for readability */
+}
+
+/* Style the main heading */
+h1 {
+  text-align: center; /* Centers the title.*/
+  color: #2c3e50;
+}
+
+/* Style each section */
+section {
+  background: white;
+  padding: 25px; /* Inner spacing*/
+  margin: 20px 0; /* Space above and below each section */
+  border-radius: 10px;
+  /* 
+    🔲 Rounded corners for a modern look.
+  */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow to lift sections off the page */
+}
+
+/* Style input fields */
+input {
+  padding: 10px;
+  margin: 5px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Style buttons */
+button {
+  padding: 10px 15px;
+  margin: 5px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; /* 🖱️ Changes cursor to pointer on hover */
+  font-size: 14px;
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: #2980b9;
+}
+
+/* Style the color box */
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: #2ecc71;
+  margin: 15px 0;
+  transition: background-color 0.4s ease; /* ⏱️ Smooth color change animation */
+}
+
+/* Class for purple color (used with toggle) */
+.box.purple {
+  background-color: #9b59b6;
+}
+
+/* Style dynamically added paragraphs */
+#container p {
+  padding: 10px;
+  background: #ecf0f1;
+  margin: 5px 0;
+  border-left: 4px solid #3498db;
+}

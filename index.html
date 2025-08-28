@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<!-- DOCTYPE: Tells the browser this is an HTML5 document.Every HTML file should start with this!-->
+
+<html lang="en">
+<!-- lang="en": Sets the language of the page to English (important for accessibility and SEO)-->
+
+<head>
+  <!--The <head> contains metadata (data about the page), not visible content-->
+  <meta charset="UTF-8" />
+  <!-- charset="UTF-8": Ensures special characters (like é, 🎉) display correctly-->
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <!-- viewport: Makes the page responsive on mobile devices.It sets the width to match the device screen and initial zoom level-->
+
+  <title>JS Fundamentals Assignment</title>
+  <!-- <title>: Shows in the browser tab. Important for usability and SEO-->
+
+  <link rel="stylesheet" href="style.css" />
+  <!-- <link>: Connects your external CSS file to style the page.
+    rel="stylesheet" means this file contains styles.
+    href="style.css" is the path to your CSS file-->
+</head>
+
+<body>
+  <!-- where all visible content goes.-->
+
+  <h1>🚀 Mastering JavaScript Fundamentals</h1>
+  <!-- This is the main heading of your page-->
+
+  <!-- 
+    🎯 PART 1: JavaScript Basics
+    We're using a form-like setup with inputs and a button to collect user data.
+  -->
+  <section>
+    <h2>🎯 Part 1: Variables, Data Types & Conditionals</h2>
+    <p>Enter your name and age to get a personalized message:</p>
+    
+    <!-- Input for user's name -->
+    <input type="text" id="nameInput" placeholder="Your name" />
+    <!-- 
+      📥 <input>: Creates a text field.
+      type="text": Accepts text input.
+      id="nameInput": Unique ID so JavaScript can find and read this element.
+      placeholder: Gray hint text inside the input.
+    -->
+
+    <!-- Input for user's age -->
+    <input type="number" id="ageInput" placeholder="Your age" />
+    <!-- 
+      type="number": Only allows numbers (good for validation).
+      id="ageInput": Used by JS to get the age value.
+    -->
+
+    <!-- Button to trigger JavaScript -->
+    <button onclick="checkEligibility()">Check Eligibility</button>
+    <!-- 
+      🖱️ <button>: Clickable button.
+      onclick="...": Runs the JavaScript function when clicked.
+      This calls checkEligibility() from script.js.
+    -->
+
+    <!-- Paragraph to show the result -->
+    <p id="result"></p>
+    <!-- 
+      📝 This empty paragraph will be filled by JavaScript.
+      id="result": So JS can find it and update its text.
+    -->
+  </section>
+
+  <!-- 
+    ❤️ PART 2: Functions
+    Buttons here will run reusable functions.
+  -->
+  <section>
+    <h2>❤️ Part 2: Reusable Functions</h2>
+    
+    <!-- Button to run greetUser() -->
+    <button onclick="greetUser()">Greet User</button>
+    
+    <!-- Button to calculate circle area -->
+    <button onclick="calculateArea()">Calculate Circle Area (radius = 5)</button>
+    
+    <!-- Output area for function results -->
+    <p id="functionResult"></p>
+    <!--This will collect output from multiple function calls-->
+  </section>
+
+  <!-- 
+    🔁 PART 3: Loops
+    Demonstrate repetition with loops.
+  -->
+  <section>
+    <h2>🔁 Part 3: Loop Examples</h2>
+    
+    <!-- For loop: prints numbers 1-5 -->
+    <button onclick="printNumbers()">For Loop: Print 1 to 5</button>
+    
+    <!-- While loop: prints even numbers -->
+    <button onclick="printEvenNumbers()">While Loop: Even numbers up to 10</button>
+    
+    <!-- List to show loop output -->
+    <ul id="loopOutput"></ul>
+    <!-- 
+      <ul> = unordered list (bulleted).
+      Each loop will add <li> items inside this.
+    -->
+  </section>
+
+  <!-- 
+    🌐 PART 4: DOM Manipulation
+    Interact with and change the page dynamically.
+  -->
+  <section>
+    <h2>🌐 Part 4: DOM Interactions</h2>
+    
+    <!-- Text to be updated -->
+    <p id="dynamicText">This text will be updated using JavaScript.</p>
+    <button onclick="updateText()">1. Update Text</button>
+
+    <!-- Box that changes color -->
+    <div id="colorBox" class="box">Click Me!</div>
+    <button onclick="toggleBackgroundColor()">2. Toggle Box Color</button>
+
+    <!-- Button to create new elements -->
+    <button onclick="createNewElement()">3. Add New Paragraph</button>
+    <div id="container"></div>
+    <!-- 
+      This empty div will hold new paragraphs created by JavaScript.
+    -->
+  </section>
+
+  <!-- 
+    🔗 Link to JavaScript file
+    Must come at the end of <body> so HTML loads first.
+  -->
+  <script src="script.js"></script>
+  <!-- 
+    This loads your JavaScript code.
+    It runs after the HTML is ready.
+  -->
+</body>
+</html>
